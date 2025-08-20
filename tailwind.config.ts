@@ -61,7 +61,16 @@ export default {
 					'accent-foreground': 'hsl(var(--sidebar-accent-foreground))',
 					border: 'hsl(var(--sidebar-border))',
 					ring: 'hsl(var(--sidebar-ring))'
-				}
+				},
+				'law-blue': 'hsl(var(--law-blue))',
+				'law-blue-light': 'hsl(var(--law-blue-light))',
+				'law-gold': 'hsl(var(--law-gold))',
+				'law-grey': 'hsl(var(--law-grey))',
+				'law-grey-light': 'hsl(var(--law-grey-light))'
+			},
+			fontFamily: {
+				'sans': ['Inter', 'system-ui', 'sans-serif'],
+				'serif': ['Playfair Display', 'serif']
 			},
 			borderRadius: {
 				lg: 'var(--radius)',
