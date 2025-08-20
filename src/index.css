@@ -38,23 +38,34 @@ All colors MUST be HSL.
     --input: 220 13% 91%;
     --ring: 221 83% 8%;
 
-    /* Professional law firm colors */
+    /* Professional law firm colors - Enhanced & Vibrant */
     --law-blue: 221 83% 8%;
     --law-blue-light: 221 43% 25%;
+    --law-blue-vibrant: 221 85% 35%;
     --law-gold: 43 96% 56%;
+    --law-gold-bright: 45 100% 65%;
+    --law-purple: 270 75% 65%;
+    --law-green: 142 71% 45%;
+    --law-orange: 25 95% 60%;
     --law-grey: 220 9% 46%;
     --law-grey-light: 220 14% 96%;
     
-    /* Gradients */
-    --gradient-hero: linear-gradient(135deg, hsl(var(--law-blue)), hsl(var(--law-blue-light)));
-    --gradient-gold: linear-gradient(135deg, hsl(var(--law-gold)), hsl(43 86% 46%));
+    /* Dynamic Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(var(--law-blue)), hsl(var(--law-blue-vibrant)), hsl(var(--law-purple)));
+    --gradient-gold: linear-gradient(135deg, hsl(var(--law-gold)), hsl(var(--law-gold-bright)));
+    --gradient-rainbow: linear-gradient(135deg, hsl(var(--law-blue-vibrant)), hsl(var(--law-purple)), hsl(var(--law-gold)), hsl(var(--law-orange)));
+    --gradient-success: linear-gradient(135deg, hsl(var(--law-green)), hsl(142 81% 55%));
+    --gradient-card: linear-gradient(145deg, hsl(var(--card)), hsl(var(--card)) 50%, hsl(var(--law-blue-light) / 0.05));
     
-    /* Shadows */
+    /* Enhanced Shadows */
     --shadow-elegant: 0 10px 30px -10px hsl(var(--law-blue) / 0.3);
     --shadow-card: 0 4px 20px -4px hsl(var(--law-blue) / 0.1);
+    --shadow-glow: 0 0 40px hsl(var(--law-gold) / 0.4);
+    --shadow-vibrant: 0 8px 32px -8px hsl(var(--law-purple) / 0.3);
     
-    /* Animations */
+    /* Smooth Animations */
     --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition-bounce: all 0.4s cubic-bezier(0.68, -0.55, 0.265, 1.55);
 
     --radius: 0.5rem;
 
@@ -76,41 +87,58 @@ All colors MUST be HSL.
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
+    --background: 222 84% 4%;
     --foreground: 210 40% 98%;
 
-    --card: 222.2 84% 4.9%;
+    --card: 222 84% 6%;
     --card-foreground: 210 40% 98%;
 
-    --popover: 222.2 84% 4.9%;
+    --popover: 222 84% 4%;
     --popover-foreground: 210 40% 98%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: 43 96% 56%;
+    --primary-foreground: 222 84% 4%;
 
-    --secondary: 217.2 32.6% 17.5%;
+    --secondary: 217 33% 18%;
     --secondary-foreground: 210 40% 98%;
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 217 33% 18%;
+    --muted-foreground: 215 20% 65%;
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 270 75% 65%;
+    --accent-foreground: 222 84% 4%;
 
-    --destructive: 0 62.8% 30.6%;
+    --destructive: 0 63% 31%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --border: 217 33% 18%;
+    --input: 217 33% 18%;
+    --ring: 43 96% 56%;
+    
+    /* Dark mode law firm colors */
+    --law-blue: 221 85% 35%;
+    --law-blue-light: 221 70% 50%;
+    --law-blue-vibrant: 221 90% 60%;
+    --law-gold: 43 100% 65%;
+    --law-gold-bright: 45 100% 75%;
+    --law-purple: 270 85% 75%;
+    --law-green: 142 81% 55%;
+    --law-orange: 25 100% 70%;
+    --law-grey: 220 20% 70%;
+    --law-grey-light: 220 30% 20%;
+    
+    /* Dark mode gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(var(--law-blue-vibrant)), hsl(var(--law-purple)), hsl(var(--law-gold)));
+    --gradient-card: linear-gradient(145deg, hsl(var(--card)), hsl(var(--card)) 50%, hsl(var(--law-blue-vibrant) / 0.1));
+    
+    --sidebar-background: 240 6% 10%;
+    --sidebar-foreground: 240 5% 96%;
+    --sidebar-primary: 43 96% 56%;
+    --sidebar-primary-foreground: 222 84% 4%;
+    --sidebar-accent: 240 4% 16%;
+    --sidebar-accent-foreground: 240 5% 96%;
+    --sidebar-border: 240 4% 16%;
+    --sidebar-ring: 43 96% 56%;
   }
 }
 
@@ -132,23 +160,66 @@ All colors MUST be HSL.
   .hero-section {
     background: var(--gradient-hero);
     box-shadow: var(--shadow-elegant);
+    background-size: 400% 400%;
+    animation: gradient-shift 8s ease infinite;
   }
   
   .card-elegant {
-    background: hsl(var(--card));
+    background: var(--gradient-card);
     box-shadow: var(--shadow-card);
-    transition: var(--transition-smooth);
+    transition: var(--transition-bounce);
+    border: 1px solid hsl(var(--border) / 0.2);
   }
   
   .card-elegant:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 8px 40px -8px hsl(var(--law-blue) / 0.2);
+    transform: translateY(-8px) scale(1.02);
+    box-shadow: var(--shadow-vibrant);
   }
   
   .gradient-text {
     background: var(--gradient-gold);
+    background-size: 200% 200%;
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
+    animation: gradient-shift 3s ease infinite;
+  }
+  
+  .glow-button {
+    position: relative;
+    overflow: hidden;
+    background: var(--gradient-rainbow);
+    background-size: 400% 400%;
+    animation: gradient-shift 3s ease infinite;
+    box-shadow: var(--shadow-glow);
+  }
+  
+  .glow-button:hover {
+    animation: gradient-shift 1s ease infinite, pulse-glow 1s ease infinite;
+    transform: translateY(-2px);
+  }
+  
+  .practice-card {
+    background: var(--gradient-card);
+    transition: var(--transition-bounce);
+    border: 2px solid transparent;
+    background-clip: padding-box;
+  }
+  
+  .practice-card:hover {
+    border-color: hsl(var(--law-gold));
+    transform: translateY(-4px) rotate(1deg);
+    box-shadow: var(--shadow-vibrant);
+  }
+  
+  .testimonial-card {
+    background: var(--gradient-card);
+    border: 1px solid hsl(var(--law-purple) / 0.2);
+    transition: var(--transition-bounce);
+  }
+  
+  .testimonial-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 12px 48px -12px hsl(var(--law-purple) / 0.4);
   }
 }

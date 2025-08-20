@@ -3,7 +3,8 @@ import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Badge } from "@/components/ui/badge";
-import { Phone, Mail, MessageCircle, MapPin, Scale, Shield, Users, Clock, CheckCircle, Star, FileText, Gavel, Home, Heart, Instagram } from "lucide-react";
+import { ThemeToggle } from "@/components/ThemeToggle";
+import { Phone, Mail, MessageCircle, MapPin, Scale, Shield, Users, Clock, CheckCircle, Star, FileText, Gavel, Home, Heart, Instagram, Sparkles } from "lucide-react";
 import { useState } from "react";
 import heroImage from "@/assets/law-firm-hero.jpg";
 const Index = () => {
@@ -84,18 +85,18 @@ const Index = () => {
   }];
   return <div className="min-h-screen bg-background">
       {/* Header */}
-      <header className="bg-white shadow-sm border-b sticky top-0 z-50">
+      <header className="bg-background/95 backdrop-blur-sm shadow-lg border-b border-law-gold/20 sticky top-0 z-50 animate-fade-in">
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
-            <div className="flex items-center gap-4">
+            <div className="flex items-center gap-4 animate-bounce-in">
               <img 
                 src="/lovable-uploads/aa1f169a-6dce-4905-84e1-969c678411b7.png" 
                 alt="Ambit Law Partners Logo" 
-                className="h-12 w-12 object-contain"
+                className="h-12 w-12 object-contain transition-transform duration-300 hover:scale-110 hover:rotate-3"
               />
               <div>
-                <h1 className="text-2xl font-serif font-bold text-law-blue">Ambit Law Partners</h1>
-                <p className="text-sm text-law-grey">Lawyers Who Listen. Solutions That Work.</p>
+                <h1 className="text-2xl font-serif font-bold gradient-text">Ambit Law Partners</h1>
+                <p className="text-sm text-muted-foreground">Lawyers Who Listen. Solutions That Work.</p>
               </div>
             </div>
             <div className="hidden md:flex items-center gap-4">
@@ -103,18 +104,19 @@ const Index = () => {
                 variant="outline" 
                 size="sm"
                 onClick={() => window.open('https://www.instagram.com/ambitlawpartners?igsh=MTFsMzI1MWt4OXNzNQ==', '_blank')}
-                className="border-law-gold text-law-gold hover:bg-law-gold hover:text-white"
+                className="border-law-purple text-law-purple hover:bg-law-purple hover:text-white transition-all duration-300 hover:scale-110"
               >
                 <Instagram className="h-4 w-4 mr-2" />
                 Follow Us
               </Button>
-              <Button variant="outline" size="sm">
+              <ThemeToggle />
+              <Button variant="outline" size="sm" className="border-law-blue-vibrant text-law-blue-vibrant hover:bg-law-blue-vibrant hover:text-white">
                 <Phone className="h-4 w-4 mr-2" />
                 Call Now
               </Button>
-              <Button variant="default" size="sm">
-                <MessageCircle className="h-4 w-4 mr-2" />
-                WhatsApp
+              <Button size="sm" className="glow-button text-white font-semibold">
+                <Sparkles className="h-4 w-4 mr-2" />
+                Free Consultation
               </Button>
             </div>
           </div>
@@ -123,36 +125,37 @@ const Index = () => {
 
       {/* Hero Section */}
       <section className="hero-section relative py-20 text-white overflow-hidden">
-        <div className="absolute inset-0 bg-black/40"></div>
-        <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{
+        <div className="absolute inset-0 bg-black/50"></div>
+        <div className="absolute inset-0 bg-cover bg-center bg-no-repeat animate-pulse" style={{
         backgroundImage: `url(${heroImage})`
       }}></div>
         <div className="container mx-auto px-4 relative z-10">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-4xl md:text-6xl font-serif font-bold mb-6">
-              Ambit Law Partners
+          <div className="max-w-4xl mx-auto text-center animate-fade-in">
+            <h1 className="text-4xl md:text-6xl font-serif font-bold mb-6 animate-bounce-in">
+              <span className="gradient-text">Ambit Law Partners</span>
             </h1>
-            <p className="text-xl md:text-2xl mb-4 font-light">
+            <p className="text-xl md:text-2xl mb-4 font-light animate-fade-in">
               Lawyers Who Listen. Solutions That Work.
             </p>
-            <p className="text-lg mb-8 opacity-90 max-w-2xl mx-auto">
+            <p className="text-lg mb-8 opacity-90 max-w-2xl mx-auto animate-fade-in">
               Professional legal services with a personal touch. We prioritize understanding your needs 
               before crafting effective legal solutions.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Button size="lg" className="bg-law-gold hover:bg-law-gold/90 text-law-blue font-semibold px-8 py-3">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center items-center animate-bounce-in">
+              <Button size="lg" className="glow-button text-white font-semibold px-8 py-3">
+                <Sparkles className="h-5 w-5 mr-2" />
                 Book a Free Consultation
               </Button>
               <div className="flex gap-3">
-                <Button variant="outline" size="lg" className="bg-white/10 border-white text-white hover:bg-white hover:text-law-blue">
+                <Button variant="outline" size="lg" className="bg-law-green/20 border-law-green text-law-green hover:bg-law-green hover:text-white transition-all duration-300 hover:scale-110">
                   <Phone className="h-5 w-5 mr-2" />
                   Call
                 </Button>
-                <Button variant="outline" size="lg" className="bg-white/10 border-white text-white hover:bg-white hover:text-law-blue">
+                <Button variant="outline" size="lg" className="bg-law-purple/20 border-law-purple text-law-purple hover:bg-law-purple hover:text-white transition-all duration-300 hover:scale-110">
                   <MessageCircle className="h-5 w-5 mr-2" />
                   WhatsApp
                 </Button>
-                <Button variant="outline" size="lg" className="bg-white/10 border-white text-white hover:bg-white hover:text-law-blue">
+                <Button variant="outline" size="lg" className="bg-law-orange/20 border-law-orange text-law-orange hover:bg-law-orange hover:text-white transition-all duration-300 hover:scale-110">
                   <Mail className="h-5 w-5 mr-2" />
                   Email
                 </Button>
@@ -196,10 +199,12 @@ const Index = () => {
             </p>
           </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {practiceAreas.map((area, index) => <Card key={index} className="card-elegant p-6 text-center">
-                <area.icon className="h-12 w-12 text-law-gold mx-auto mb-4" />
-                <h3 className="text-xl font-semibold text-law-blue mb-3">{area.title}</h3>
-                <p className="text-law-grey leading-relaxed">{area.description}</p>
+            {practiceAreas.map((area, index) => <Card key={index} className="practice-card p-6 text-center animate-fade-in" style={{animationDelay: `${index * 0.1}s`}}>
+                <div className="bg-gradient-to-br from-law-gold to-law-orange p-3 rounded-full w-16 h-16 mx-auto mb-4 animate-pulse-glow">
+                  <area.icon className="h-10 w-10 text-white mx-auto" />
+                </div>
+                <h3 className="text-xl font-semibold text-law-blue-vibrant mb-3">{area.title}</h3>
+                <p className="text-muted-foreground leading-relaxed">{area.description}</p>
               </Card>)}
           </div>
         </div>
@@ -240,12 +245,12 @@ const Index = () => {
             </p>
           </div>
           <div className="grid md:grid-cols-3 gap-6">
-            {testimonials.map((testimonial, index) => <Card key={index} className="card-elegant p-6">
+            {testimonials.map((testimonial, index) => <Card key={index} className="testimonial-card p-6 animate-fade-in" style={{animationDelay: `${index * 0.2}s`}}>
                 <div className="flex items-center mb-4">
-                  {[...Array(testimonial.rating)].map((_, i) => <Star key={i} className="h-5 w-5 text-law-gold fill-current" />)}
+                  {[...Array(testimonial.rating)].map((_, i) => <Star key={i} className="h-5 w-5 text-law-gold-bright fill-current animate-pulse" style={{animationDelay: `${i * 0.1}s`}} />)}
                 </div>
-                <p className="text-law-grey mb-4 italic">"{testimonial.text}"</p>
-                <p className="font-semibold text-law-blue">- {testimonial.name}</p>
+                <p className="text-muted-foreground mb-4 italic">"{testimonial.text}"</p>
+                <p className="font-semibold gradient-text">- {testimonial.name}</p>
               </Card>)}
           </div>
         </div>
