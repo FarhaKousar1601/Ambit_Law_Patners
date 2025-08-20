@@ -3,7 +3,7 @@ import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Badge } from "@/components/ui/badge";
-import { Phone, Mail, MessageCircle, MapPin, Scale, Shield, Users, Clock, CheckCircle, Star, FileText, Gavel, Home, Heart } from "lucide-react";
+import { Phone, Mail, MessageCircle, MapPin, Scale, Shield, Users, Clock, CheckCircle, Star, FileText, Gavel, Home, Heart, Instagram } from "lucide-react";
 import { useState } from "react";
 import heroImage from "@/assets/law-firm-hero.jpg";
 const Index = () => {
@@ -87,11 +87,27 @@ const Index = () => {
       <header className="bg-white shadow-sm border-b sticky top-0 z-50">
         <div className="container mx-auto px-4 py-4">
           <div className="flex items-center justify-between">
-            <div>
-              <h1 className="text-2xl font-serif font-bold text-law-blue">Ambit Law Partners</h1>
-              <p className="text-sm text-law-grey">Lawyers Who Listen. Solutions That Work.</p>
+            <div className="flex items-center gap-4">
+              <img 
+                src="/lovable-uploads/aa1f169a-6dce-4905-84e1-969c678411b7.png" 
+                alt="Ambit Law Partners Logo" 
+                className="h-12 w-12 object-contain"
+              />
+              <div>
+                <h1 className="text-2xl font-serif font-bold text-law-blue">Ambit Law Partners</h1>
+                <p className="text-sm text-law-grey">Lawyers Who Listen. Solutions That Work.</p>
+              </div>
             </div>
             <div className="hidden md:flex items-center gap-4">
+              <Button 
+                variant="outline" 
+                size="sm"
+                onClick={() => window.open('https://www.instagram.com/ambitlawpartners?igsh=MTFsMzI1MWt4OXNzNQ==', '_blank')}
+                className="border-law-gold text-law-gold hover:bg-law-gold hover:text-white"
+              >
+                <Instagram className="h-4 w-4 mr-2" />
+                Follow Us
+              </Button>
               <Button variant="outline" size="sm">
                 <Phone className="h-4 w-4 mr-2" />
                 Call Now
